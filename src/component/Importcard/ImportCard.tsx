@@ -1,6 +1,9 @@
 import React from "react";
 import "./ImportCard.scss";
-const ImportCard = () => {
+interface ImportCardProps {
+  onSwitchToListing: () => void;
+}
+const ImportCard = ({ onSwitchToListing }: ImportCardProps) => {
   return (
     <div className="import_pro_crd">
       <div className="crd_icon">
@@ -14,7 +17,9 @@ const ImportCard = () => {
         We’ve used your existing product titles, SKUs and barcodes to identify
         your items.
       </p>
-      <button className="btn btn_primary">Go to products listing</button>
+      <button className="btn btn_primary" onClick={onSwitchToListing}>
+        Go to products listing
+      </button>
     </div>
   );
 };

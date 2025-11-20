@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 import "./ProgressBar.scss";
 import ImportCard from "../Importcard/ImportCard";
-const ProgressBar = () => {
+interface ProgressBarProps {
+  onSwitchToListing: () => void;
+}
+const ProgressBar = ({ onSwitchToListing }: ProgressBarProps) => {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
@@ -41,7 +44,7 @@ const ProgressBar = () => {
         </div>
       )}
 
-      {progress === 100 && <ImportCard />}
+      {progress === 100 && <ImportCard onSwitchToListing={onSwitchToListing} />}
     </>
   );
 };
