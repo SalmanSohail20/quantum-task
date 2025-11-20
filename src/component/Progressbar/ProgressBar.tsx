@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import "./ProgressBar.scss";
 import ImportCard from "../Importcard/ImportCard";
-interface ProgressBarProps {
-  onSwitchToListing: () => void;
-}
-const ProgressBar = ({ onSwitchToListing }: ProgressBarProps) => {
+import { useNavigate } from "react-router-dom";
+interface ProgressBarProps {}
+const ProgressBar = ({}: ProgressBarProps) => {
+  const navigate = useNavigate();
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
@@ -12,6 +12,7 @@ const ProgressBar = ({ onSwitchToListing }: ProgressBarProps) => {
       setProgress((prev) => {
         if (prev >= 100) {
           clearInterval(interval);
+          localStorage.setItem("currentView", "analytics");
           return 100;
         }
         return prev + 1;
@@ -20,6 +21,11 @@ const ProgressBar = ({ onSwitchToListing }: ProgressBarProps) => {
 
     return () => clearInterval(interval);
   }, []);
+
+  const onSwitchToListing = () => {
+    navigate("analytics");
+  };
+
   return (
     <>
       {progress < 100 && (
