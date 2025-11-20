@@ -8,7 +8,7 @@ const Navbar = () => {
       <div className="container ">
         <div className="navbar_brand">
           <Link to="/">
-            <img src="/public/images/logo.svg" alt="" />
+            <img src="/images/logo.svg" alt="" />
           </Link>
         </div>
         <nav className="head_navbar">
@@ -29,12 +29,18 @@ const Navbar = () => {
         </nav>
         <div className="navbar_end">
           <div className="user_account">
-            <div className="user_avatar"></div>
             <div className="user_info">
-              <strong className="user_name">John Doe</strong>
-              <span className="user_email">johndoe@example.com</span>
+              <strong className="user_name">John Seller</strong>
+              <span className="user_email">Premium Plan</span>
+            </div>
+            <div className="user_avatar">
+              <img src="/images/user-avatar.svg" alt="" />
             </div>
           </div>
+          <a href="/" className="logout_btn">
+            <i className="ico ico-logo-out"></i>
+            <span>Disconnect</span>
+          </a>
         </div>
       </div>
     </div>

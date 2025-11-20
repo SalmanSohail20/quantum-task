@@ -5,6 +5,7 @@
     background-color: $white;
     color: #6b7280;
     padding: 17px 0;
+    border-bottom: 1px solid #e5e7eb;
     .container {
         display: flex;
         align-items: center;
@@ -13,6 +14,40 @@
         flex-grow: 1;
         display: flex;
         justify-content: center;
+    }
+
+    .user_account {
+        display: flex;
+
+        align-items: center;
+        gap: 10px;
+        .user_info {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            @include font(14, 16, 400);
+            color: #6b7280;
+            text-align: end;
+        }
+        .user_name {
+            color: #111827;
+            font-weight: 600;
+        }
+    }
+    .logout_btn {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        color: $clr-primary;
+        @include font(14, 16, 400);
+        .ico {
+            @include font(18, 16);
+        }
+    }
+    .navbar_end {
+        display: flex;
+        align-items: center;
+        gap: 20px;
     }
 }
 
