@@ -1,0 +1,254 @@
+@font-face {
+  font-family: "icomoon";
+  src: url("../../public/assets/fonts/icomoon.eot?j0lh5b");
+  src:
+    url("../../public/assets/fonts/icomoon.eot?j0lh5b#iefix") format("embedded-opentype"),
+    url("../../public/assets/fonts/icomoon.ttf?j0lh5b") format("truetype"),
+    url("../../public/assets/fonts/icomoon.woff?j0lh5b") format("woff"),
+    url("../../public/assets/fonts/icomoon.svg?j0lh5b#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="ico-"],
+[class*=" ico-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ico-cms-integration:before {
+  content: "\e944";
+}
+.ico-go-live:before {
+  content: "\e945";
+}
+.ico-optimized-icon:before {
+  content: "\e946";
+}
+.ico-scalable-icon:before {
+  content: "\e947";
+}
+.ico-ai-assisted:before {
+  content: "\e948";
+}
+.ico-access-control:before {
+  content: "\e93d";
+}
+.ico-ai-write:before {
+  content: "\e93e";
+}
+.ico-all-in-one:before {
+  content: "\e93f";
+}
+.ico-book:before {
+  content: "\e940";
+}
+.ico-hybrid-ai:before {
+  content: "\e941";
+}
+.ico-launch:before {
+  content: "\e942";
+}
+.ico-scaleable1:before {
+  content: "\e943";
+}
+.ico-target:before {
+  content: "\e939";
+}
+.ico-template .path1:before {
+  content: "\e93a";
+  color: rgb(255, 255, 255);
+}
+.ico-template .path2:before {
+  content: "\e93b";
+  margin-left: -1.025390625em;
+  color: rgb(0, 0, 0);
+}
+.ico-template .path3:before {
+  content: "\e93c";
+  margin-left: -1.025390625em;
+  color: rgb(0, 0, 0);
+}
+.ico-dynamic-content:before {
+  content: "\e92c";
+}
+.ico-dynamic-widgets:before {
+  content: "\e92d";
+}
+.ico-integration:before {
+  content: "\e92e";
+}
+.ico-multi-web:before {
+  content: "\e92f";
+}
+.ico-network:before {
+  content: "\e930";
+}
+.ico-plug-play:before {
+  content: "\e931";
+}
+.ico-real-time:before {
+  content: "\e932";
+}
+.ico-scaleable:before {
+  content: "\e933";
+}
+.ico-smart-automation:before {
+  content: "\e934";
+}
+.ico-zero-code:before {
+  content: "\e935";
+}
+.ico-ai-setup:before {
+  content: "\e936";
+}
+.ico-cms:before {
+  content: "\e937";
+}
+.ico-digital:before {
+  content: "\e938";
+}
+.ico-analytics:before {
+  content: "\e922";
+}
+.ico-cloud-server:before {
+  content: "\e923";
+}
+.ico-data-storage:before {
+  content: "\e924";
+}
+.ico-language:before {
+  content: "\e925";
+}
+.ico-notification-bell:before {
+  content: "\e926";
+}
+.ico-protection:before {
+  content: "\e927";
+}
+.ico-responsive:before {
+  content: "\e928";
+}
+.ico-SEO:before {
+  content: "\e929";
+}
+.ico-theme:before {
+  content: "\e92a";
+}
+.ico-time-left:before {
+  content: "\e92b";
+}
+.ico-down-arrow:before {
+  content: "\e91b";
+  color: #636363;
+}
+.ico-search:before {
+  content: "\e91c";
+}
+.ico-view-arrow:before {
+  content: "\e91d";
+}
+.ico-ice-hockey:before {
+  content: "\e91a";
+}
+.ico-cross-fill:before {
+  content: "\e919";
+}
+.ico-link-arrow:before {
+  content: "\e918";
+}
+.ico-check-icon:before {
+  content: "\e900";
+}
+.ico-clock:before {
+  content: "\e901";
+}
+.ico-cup:before {
+  content: "\e902";
+}
+.ico-fb:before {
+  content: "\e903";
+}
+.ico-football:before {
+  content: "\e904";
+}
+.ico-golf:before {
+  content: "\e905";
+}
+.ico-insta:before {
+  content: "\e906";
+}
+.ico-linkedin:before {
+  content: "\e907";
+}
+.ico-minus:before {
+  content: "\e908";
+}
+.ico-pi-chart:before {
+  content: "\e909";
+}
+.ico-plus:before {
+  content: "\e90a";
+}
+.ico-post-icon:before {
+  content: "\e90b";
+}
+.ico-quot-left:before {
+  content: "\e90c";
+}
+.ico-quot-right:before {
+  content: "\e90d";
+}
+.ico-rugby-ball:before {
+  content: "\e90e";
+}
+.ico-switch-arrow:before {
+  content: "\e90f";
+}
+.ico-twitter:before {
+  content: "\e910";
+}
+.ico-user-fill:before {
+  content: "\e911";
+}
+.ico-volley-ball:before {
+  content: "\e912";
+}
+.ico-wifi:before {
+  content: "\e913";
+}
+.ico-youtube:before {
+  content: "\e914";
+}
+.ico-ball:before {
+  content: "\e915";
+}
+.ico-baskit-ball:before {
+  content: "\e916";
+}
+.ico-brush:before {
+  content: "\e917";
+}
+.ico-clear:before {
+  content: "\e920";
+}
+.ico-filter-icon:before {
+  content: "\e921";
+}
+.ico-close:before {
+  content: "\e91f";
+}
+.ico-filter:before {
+  content: "\e91e";
+}

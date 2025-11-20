@@ -1,0 +1,25 @@
+@font-face {
+    @include fontface(Poppins, Poppins-Regular, 400, normal);
+}
+@font-face {
+    @include fontface(Poppins, Poppins-Italic, 400, italic);
+}
+@font-face {
+    @include fontface(Poppins, Poppins-Medium, 500, normal);
+}
+@font-face {
+    @include fontface(Poppins, Poppins-MediumItalic, 500, italic);
+}
+@font-face {
+    @include fontface(Poppins, Poppins-SemiBold, 600, normal);
+}
+@font-face {
+    @include fontface(Poppins, Poppins-SemiBoldItalic, 600, italic);
+}
+
+@font-face {
+    @include fontface(Poppins, Poppins-Bold, 700, normal);
+}
+@font-face {
+    @include fontface(Poppins, Poppins-BoldItalic, 700, italic);
+}

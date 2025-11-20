@@ -1,0 +1,48 @@
+html {
+	font-family: sans-serif;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+
+
+body {
+	margin: 0;
+}
+
+
+article,
+aside,
+footer,
+header,
+main,
+nav,
+section{
+	display: block;
+}
+
+a {
+	background-color: transparent;
+}
+
+
+a:active,
+a:hover {
+	outline: 0;
+}
+
+strong {
+	font-weight: bold;
+}
+
+img {
+	border: 0;
+}
+
+svg:not(:root) {
+	overflow: hidden;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
