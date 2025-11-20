@@ -4,11 +4,18 @@
 .head_nav_wrap {
     background-color: $white;
     color: #6b7280;
-    padding: 17px 0;
+    padding: 10px 0;
     border-bottom: 1px solid #e5e7eb;
+    position: relative;
+    @media (min-width: $xxl) {
+        padding: 17px 0;
+    }
     .container {
         display: flex;
         align-items: center;
+        @media (max-width: $lg-m) {
+            justify-content: space-between;
+        }
     }
     .head_navbar {
         flex-grow: 1;
@@ -18,9 +25,18 @@
 
     .user_account {
         display: flex;
-
         align-items: center;
         gap: 10px;
+        @media (min-width: $md-m) {
+            flex-direction: column-reverse;
+        }
+        // &:hover {
+        //     .user_info {
+        //         opacity: 1;
+        //         visibility: visible;
+        //     }
+        // }
+
         .user_info {
             display: flex;
             flex-direction: column;
@@ -28,10 +44,36 @@
             @include font(14, 16, 400);
             color: #6b7280;
             text-align: end;
+            @media (min-width: $md-m) {
+                position: absolute;
+                top: 100%;
+                opacity: 0;
+                visibility: hidden;
+            }
         }
         .user_name {
             color: #111827;
             font-weight: 600;
+        }
+    }
+    .user_avatar {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        overflow: hidden;
+        flex-shrink: 0;
+        @media (min-width: $md) {
+            width: 40px;
+            height: 40px;
+        }
+        @media (min-width: $lg) {
+            width: 47px;
+            height: 47px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
     .logout_btn {
@@ -55,6 +97,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: absolute;
+    top: 100%;
+    background: $white;
+    left: 0;
+    right: 0;
+    padding: 17px 0;
+    margin-top: 2px;
+    @media (min-width: $lg) {
+        padding: 0;
+        position: relative;
+    }
     .navbar_brand a {
         color: white;
         text-decoration: none;
@@ -64,10 +117,18 @@
     .navbar_links {
         list-style: none;
         display: flex;
-        gap: 40px;
+        gap: 30px;
         margin: 0;
         padding: 0;
         @include font(16, 20, 400);
+        flex-direction: column;
+        @media (min-width: $lg) {
+            flex-direction: row;
+            gap: 20px;
+        }
+        @media (min-width: $xl) {
+            gap: 40px;
+        }
         li {
             a {
                 text-decoration: none;
