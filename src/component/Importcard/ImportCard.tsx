@@ -6,14 +6,14 @@ const ImportCard = () => {
       <div className="crd_icon">
         <i className="ico ico-check"></i>
       </div>
-      <div className="crd_txt">
-        <strong>All products imported!</strong>
-        <strong>We’ve imported 12 products from your store.</strong>
-        <p>
-          We’ve used your existing product titles, SKUs and barcodes to identify
-          your items.
-        </p>
-      </div>
+      <strong className="crd_title">All products imported!</strong>
+      <strong className="crd_subtitle">
+        We’ve imported 12 products from your store.
+      </strong>
+      <p>
+        We’ve used your existing product titles, SKUs and barcodes to identify
+        your items.
+      </p>
       <button className="btn btn_primary">Go to products listing</button>
     </div>
   );
