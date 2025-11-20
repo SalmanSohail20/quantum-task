@@ -1,0 +1,50 @@
+@use "../../scss/base/variables" as *;
+@use "../../scss/base/mixins" as *;
+
+.progress_container {
+    max-width: 748px;
+    width: 100%;
+    margin: 181px auto auto;
+    text-align: center;
+    .text_contain {
+        color: $clr-text;
+        @include font(16, 20, 400);
+        margin-bottom: 40px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        .title {
+            @include font(18, 22, 600);
+            margin-bottom: 16px;
+            color: $clr-title;
+            display: block;
+        }
+    }
+}
+
+.progress_wrapper {
+    margin: 20px auto;
+
+    .progress_bar {
+        width: 100%;
+        height: 17px;
+        background: #d9d9d9;
+        border-radius: 12px;
+        overflow: hidden;
+
+        .progress_fill {
+            border-radius: 12px;
+            height: 100%;
+            background: $clr-primary;
+            width: 0%;
+            transition: width 0.1s linear;
+        }
+    }
+    .progress_text {
+        margin-top: 10px;
+        @include font(14, 16, 500);
+        color: #000;
+        display: block;
+        text-align: left;
+    }
+}

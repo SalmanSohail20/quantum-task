@@ -1,0 +1,36 @@
+.import_pro_crd {
+    max-width: 523px;
+    width: 100%;
+    margin: auto;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 61px 34px;
+    .crd_icon {
+        width: 163px;
+        height: 163px;
+        padding: 14px;
+        border-radius: 50%;
+        background: rgba(52, 199, 89, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        .ico {
+            background: #34c759;
+            width: 135px;
+            height: 135px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 50px;
+            color: #fff;
+        }
+    }
+    .crd_txt {
+    }
+}

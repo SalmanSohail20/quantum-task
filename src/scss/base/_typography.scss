@@ -79,12 +79,12 @@ a {
 	}
 
 	&.btn_primary {
-		background: $clr-blue;
+		background: $clr-primary;
 		color: $white;
-		border-color: $clr-blue;
+		border-color: $clr-primary;
 		&:hover {
-			border-color: $clr-blue;
-			color: $clr-blue;
+			border-color: $clr-primary;
+			color: $clr-primary;
 			background: transparent;
 		}
 	}
