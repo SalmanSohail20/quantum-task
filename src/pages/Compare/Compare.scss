@@ -25,6 +25,9 @@
                 display: flex;
                 gap: 8px;
                 align-items: center;
+                strong {
+                    font-weight: 600;
+                }
             }
             .btn {
                 padding: 5px 19px;
