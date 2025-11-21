@@ -40,10 +40,10 @@ const Navbar = () => {
               <img src="/images/user-avatar.svg" alt="" />
             </div>
           </div>
-          <a href="/" className="logout_btn">
+          <Link to="/" className="logout_btn">
             <i className="ico ico-logo-out"></i>
             <span>Disconnect</span>
-          </a>
+          </Link>
         </div>
       </div>
     </div>

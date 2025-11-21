@@ -1,6 +1,8 @@
 import React from "react";
 import "./ComparisonCard.scss";
 import FilterSearch from "../common/FilterSearch";
+import { Link } from "react-router-dom";
+
 const ComparisonCard = () => {
   return (
     <>
@@ -13,7 +15,7 @@ const ComparisonCard = () => {
       <div className="comp_crd">
         <div className="crd_head">
           <div className="head_img">
-            {/* <img src="/images/product-1.png" alt="" width={51} height={51} /> */}
+            <img src="/images/product-1.png" alt="" width={51} height={51} />
           </div>
           <div className="head_txt">
             <strong className="crd_title">Wireless Headphones Pro</strong>
@@ -36,9 +38,9 @@ const ComparisonCard = () => {
                 <td>-</td>
                 <td>-</td>
                 <td>
-                  <a href="" className="view_link active">
+                  <Link to="" className="view_link active">
                     View Product
-                  </a>
+                  </Link>
                 </td>
               </tr>
               <tr>
@@ -47,9 +49,9 @@ const ComparisonCard = () => {
                 <td>No data yet</td>
                 <td>No data yet</td>
                 <td>
-                  <a href="" className="view_link active">
+                  <Link to="" className="view_link active">
                     View Product
-                  </a>
+                  </Link>
                 </td>
               </tr>
               <tr>
@@ -58,9 +60,9 @@ const ComparisonCard = () => {
                 <td>No data yet</td>
                 <td>No data yet</td>
                 <td>
-                  <a href="" className="view_link active">
+                  <Link to="" className="view_link active">
                     View Product
-                  </a>
+                  </Link>
                 </td>
               </tr>
             </tbody>
@@ -70,7 +72,7 @@ const ComparisonCard = () => {
       <div className="comp_crd">
         <div className="crd_head">
           <div className="head_img">
-            {/* <img src="/images/product-1.png" alt="" width={51} height={51} /> */}
+            <img src="/images/product-1.png" alt="" width={51} height={51} />
           </div>
           <div className="head_txt">
             <strong className="crd_title">Wireless Headphones Pro</strong>
@@ -93,9 +95,9 @@ const ComparisonCard = () => {
                 <td>-</td>
                 <td>-</td>
                 <td>
-                  <a href="" className="view_link active">
+                  <Link to="" className="view_link active">
                     View Product
-                  </a>
+                  </Link>
                 </td>
               </tr>
               <tr>
@@ -104,9 +106,9 @@ const ComparisonCard = () => {
                 <td>No data yet</td>
                 <td>No data yet</td>
                 <td>
-                  <a href="" className="view_link">
+                  <Link to="" className="view_link">
                     View Product
-                  </a>
+                  </Link>
                 </td>
               </tr>
               <tr>
@@ -115,9 +117,9 @@ const ComparisonCard = () => {
                 <td>No data yet</td>
                 <td>No data yet</td>
                 <td>
-                  <a href="" className="view_link">
+                  <Link to="" className="view_link">
                     View Product
-                  </a>
+                  </Link>
                 </td>
               </tr>
             </tbody>

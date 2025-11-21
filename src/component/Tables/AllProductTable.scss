@@ -1,0 +1,12 @@
+@use "../../scss/base/variables" as *;
+@use "../../scss/base/mixins" as *;
+
+.all_product_table {
+    overflow-x: auto;
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+        @include font(14, 18);
+    }
+}
