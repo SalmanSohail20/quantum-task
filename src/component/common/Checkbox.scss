@@ -1,7 +1,7 @@
 @use "../../scss/base/variables" as *;
 @use "../../scss/base/mixins" as *;
 
-.styled-checkbox {
+.checkbox_input {
   position: absolute; // take it out of document flow
   opacity: 0; // hide it
 
@@ -9,12 +9,13 @@
     position: relative;
     cursor: pointer;
     padding: 0;
+    display: inline-block;
+    margin-bottom: 0;
   }
 
   // Box.
   & + label:before {
     content: "";
-    margin-right: 10px;
     display: inline-block;
     vertical-align: text-top;
     width: 24px;
@@ -46,21 +47,11 @@
   &:checked + label:after {
     content: "\e909";
     font-family: "icomoon";
-    font-size: 14px;
+    font-size: 12px;
     position: absolute;
     left: 5px;
     top: 50%;
     transform: translateY(-50%);
     color: #fff;
-    // width: 2px;
-    // height: 2px;
-    // box-shadow:
-    //   2px 0 0 white,
-    //   4px 0 0 white,
-    //   4px -2px 0 white,
-    //   4px -4px 0 white,
-    //   4px -6px 0 white,
-    //   4px -8px 0 white;
-    // transform: rotate(45deg);
   }
 }

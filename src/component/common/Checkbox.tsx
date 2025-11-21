@@ -1,14 +1,20 @@
 import "./Checkbox.scss";
-const Checkbox = () => {
+
+interface CheckboxProps {
+  id: string;
+  value?: string;
+}
+
+const Checkbox: React.FC<CheckboxProps> = ({ id, value = "value1" }) => {
   return (
     <div>
       <input
-        className="styled-checkbox"
-        id="styled-checkbox-1"
+        className="checkbox_input"
+        id={id}
         type="checkbox"
-        value="value1"
+        value={value}
       />
-      <label htmlFor="styled-checkbox-1">Checkbox</label>
+      <label htmlFor={id}></label>
     </div>
   );
 };

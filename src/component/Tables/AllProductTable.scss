@@ -3,10 +3,64 @@
 
 .all_product_table {
     overflow-x: auto;
-    table {
+     table {
         width: 100%;
         border-collapse: collapse;
         text-align: left;
         @include font(14, 18);
+        th,td{
+            &:first-child {
+                width: 51px;
+            }
+            &:last-child{
+                text-align: end;
+            }
+        }
+     
+            th {
+                padding: 4px 5px;
+                border-bottom: 1px solid #e5e7eb;
+                color: $clr-title;
+              
+            }
+      
+            td {
+                padding: 16px 5px;
+                color: #6b7280;
+                border-bottom: 1px solid #e5e7eb;
+                font-weight: 500;
+                &:nth-child(3){
+                       @include font(18, 22);
+                       color: #111827; 
+                }
+
+              
+            }
+            .product_dec{
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                color: #111827;
+                .product_img{
+                    width: 51px;
+                    height: 51px;
+                    border-radius: 8px;
+                    overflow: hidden;
+                    flex-shrink: 0;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+            .competitor_btn{
+                display: flex;
+                align-items: center;
+                color: $clr-primary;
+                @include font(14, 18, 600);
+                gap: 9px;
+            }
+      
     }
 }
