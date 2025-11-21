@@ -1,36 +1,145 @@
 @use "../../scss/base/variables" as *;
 @use "../../scss/base/mixins" as *;
-.comp_crd{
+
+.comp_crd_head {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    margin-bottom: 8px;
+    .btn_outline {
+        padding: 13px 35px;
+    }
+}
+.sub_heading {
+    @include font(18, 24, 500);
+    color: $clr-title;
+    margin-bottom: 16px;
+    display: block;
+}
+.search_wrap {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    .form_control {
+        height: 48px;
+        max-width: 362px;
+        width: 100%;
+    }
+    .btn_filter {
+        flex-shrink: 0;
+        width: 48px;
+        height: 48px;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #111827;
+        background: $white;
+        border: 1px solid #e5e7eb;
+        font-size: 18px;
+        line-height: 18px;
+        &:hover {
+            background: $clr-primary;
+            border-color: $clr-primary;
+            color: $white;
+        }
+    }
+}
+
+.comp_crd {
     background: $white;
-    border: 1px solid #E5E7EB;
+    border: 1px solid #e5e7eb;
     border-radius: 16px;
     padding: 24px;
+    margin-bottom: 24px;
     display: flex;
     flex-direction: column;
     gap: 24px;
-    @media(min-width:$md){
-    
-}
-.crd_head{
-    display: flex;
-    gap: 8px;
-    .head_txt{
+    @media (min-width: $md) {
+    }
+    .crd_head {
         display: flex;
-        flex-direction: column;
-        gap: 4px;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 40px;
+        .head_txt {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            @include font(14, 18, 400);
+            color: #6b7280;
+            .crd_title {
+                font-weight: 600;
+                color: $clr-title;
+            }
+        }
+    }
+    .head_img {
+        width: 51px;
+        height: 51px;
+        border-radius: 8px;
+        overflow: hidden;
+        flex-shrink: 0;
+        background: #e5e7eb;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 }
-.head_img{
-    width: 50px;
-    height: 50px;
-    border-radius: 8px;
-    overflow: hidden;
-    flex-shrink: 0;
-    background: #E5E7EB;
-    img{
+
+.responsive_table {
+    overflow-x: auto;
+    table {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
+        border-collapse: collapse;
+        text-align: left;
+        @include font(14, 18);
+        thead {
+            th {
+                padding: 16px 5px;
+                border-bottom: 1px solid #e5e7eb;
+                color: $clr-title;
+                &:first-child {
+                    padding-left: 19px;
+                }
+            }
+        }
+        tbody {
+            tr {
+                &:first-child {
+                    td {
+                        background: #f4f1f5;
+                        color: $clr-title;
+                    }
+                }
+            }
+            td {
+                padding: 18px 5px;
+                color: #6b7280;
+                border-bottom: 1px solid #e5e7eb;
+                font-weight: 500;
+                &:first-child {
+                    padding-left: 19px;
+                    font-weight: 600;
+                    color: $clr-title;
+                }
+                a {
+                    color: #6b7280;
+                }
+            }
+            .view_link {
+                text-decoration: none;
+                pointer-events: none;
+                user-select: none;
+                &.active {
+                    user-select: unset;
+                    pointer-events: auto;
+                    color: $clr-primary;
+                    font-weight: 600;
+                }
+            }
+        }
     }
-}
 }

@@ -28,23 +28,22 @@ input[type='tel'],
 input[type='email'],
 input[type='search'],
 input[type='password'],
-.form-control,
+.form_control,
 //input[type='url'],
 // input[type='date'],
 textarea {
-	height: 45px;
+	height: 41px;
 	// border:1px solid $clr-gray4;
-	@include font(16, 20, 400);
-	padding: 9px 16px;
+	@include font(14, 18, 400);
+	padding: 12px 16px;
 	width: 100%;
 	border-radius: 8px;
-	background: #f5f6f9;
+	background: #fff;
+	color: #6b7280;
 	box-shadow: none;
 	outline: none;
-	border: 0;
-	@media (min-width: $md) {
-		height: 56px;
-	}
+	border: 1px solid #e5e7eb;
+
 	&:focus {
 		outline: 0;
 		box-shadow: none;
@@ -64,7 +63,7 @@ textarea {
 // 	-webkit-border-radius: 0;
 // }
 
-textarea.form-control {
+textarea.form_control {
 	resize: none;
 	vertical-align: top;
 	border-width: 1px;
@@ -90,9 +89,17 @@ input[type="submit"] {
 		}
 	}
 }
-.input-wrp {
-	line-height: 1;
+
+.form_control {
+	padding: 12px 16px;
+	border-radius: 8px;
+	font-size: 14px;
+	line-height: 18px;
+	color: #6b7280;
+	border: 1px solid #e5e7eb;
+	background: #fff;
 }
+
 .label,
 label {
 	@include font(16, 22);
@@ -104,72 +111,24 @@ label {
 	}
 }
 
-.contact_form {
-	// margin-bottom: 40px;
-	// @media (min-width: $sm) {
-	// 	margin-bottom: 60px;
-	// }
-	// @media (min-width: $md) {
-	// 	margin-bottom: 80px;
-	// }
-	// @media (min-width: $xl) {
-	// 	margin-bottom: 120px;
-	// }
-	label {
-		font-weight: 500;
-	}
-	.form-group {
-		flex-grow: 1;
-	}
+.filter_search {
+	position: relative;
 
-	.error {
-		color: $clr-red;
-		font-size: 14px;
-		padding-left: 5px;
-		display: inline-block;
+	.form_control {
+		padding-left: 48px;
 	}
-	.form-control {
-		height: 50px;
-		background: #fff;
-		border: 1px solid rgba(131, 131, 131, 0.25);
-		font-family: "IBM Plex Sans", "IBM Plex Sans Fallback", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
-		&.error {
-			border: 1px solid #dd3546;
-		}
-	}
-	.btn_wrap {
-		display: flex;
-		align-items: center;
-		justify-content: end;
-		gap: 20px;
-		margin-bottom: 20px;
-		.btn {
-			flex-grow: 1;
-			@include font(20, 24, 500);
-			font-family: "IBM Plex Sans", "IBM Plex Sans Fallback", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
-		}
-	}
-	.form_text {
-		max-width: 480px;
-		@include font(14, 20);
-		color: #45454c;
-		margin-bottom: 30px;
-		@media (min-width: $md) {
-			@include font(16, 22);
-		}
-	}
-	.footer_text {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 100%;
-		gap: 3px;
-		@include font(14, 20);
-		@media (min-width: $md) {
-			@include font(16, 22);
-		}
-		a {
-			font-weight: 500;
-		}
+	&:before {
+		content: "\e902";
+		font-family: "icomoon";
+		position: absolute;
+		left: 16px;
+		top: 50%;
+		transform: translateY(-50%);
+		color: #6b7280;
+		font-size: 18px;
+		line-height: 19px;
+		font-weight: 400;
+		user-select: none;
+		pointer-events: none;
 	}
 }

@@ -91,10 +91,10 @@ a {
 	}
 	&.btn_outline {
 		background: transparent;
-		color: $clr-blue;
-		border-color: $clr-blue;
+		color: $clr-primary;
+		border-color: $clr-primary;
 		&:hover {
-			background: $clr-blue;
+			background: $clr-primary;
 			color: $white;
 		}
 	}
