@@ -1,5 +1,3 @@
-import React from "react";
-
 const FilterSearch = () => {
   return (
     <div className="search_wrap">

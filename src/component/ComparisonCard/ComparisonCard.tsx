@@ -1,4 +1,3 @@
-import React from "react";
 import "./ComparisonCard.scss";
 import FilterSearch from "../common/FilterSearch";
 import { Link } from "react-router-dom";

@@ -1,4 +1,3 @@
-import React from "react";
 import "./ImportCard.scss";
 interface ImportCardProps {
   onSwitchToListing: () => void;

@@ -1,4 +1,3 @@
-import React from "react";
 import "./Compare.scss";
 import FilterSearch from "../../component/common/FilterSearch";
 import AllProductTable from "../../component/Tables/AllProductTable";

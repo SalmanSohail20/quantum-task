@@ -1,4 +1,3 @@
-import React from "react";
 import "./AllProductTable.scss";
 import Checkbox from "../common/Checkbox";
 const AllProductTable = () => {

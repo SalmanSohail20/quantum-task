@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import React from "react";
+
 import "./header.scss";
 const Header = () => {
   const [progress, setProgress] = useState(0);
