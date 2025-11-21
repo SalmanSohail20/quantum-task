@@ -25,17 +25,7 @@ b,
 strong {
   font-weight: 700;
 }
-// h2,
-// h1,
-// .h1 {
-//   //@include font(20, 26, 700);
-//   margin: 0 0 10px;
-//   font-size: 22px;
-//   line-height: 1.4;
-//   @media (min-width: 768px) {
-//     font-size: 24px;
-//   }
-// }
+
 h1 {
   color: var(--heading_color);
   font-size: 20px;
@@ -130,10 +120,15 @@ p {
     max-width: 1310px;
   }
 }
-
+.txt_primary {
+  color: $clr-primary;
+}
+.txt_dark {
+  color: $black;
+}
 .heading {
   @include font(16, 20, 400);
-  color: #6B7280;
+  color: #6b7280;
   margin-bottom: 24px;
   h1,
   .h1 {
