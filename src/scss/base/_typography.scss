@@ -98,12 +98,12 @@ a {
 			color: $white;
 		}
 	}
-	&.btn_dark {
-		background: $bg-dark;
-		color: $white;
-		border-color: $bg-dark;
+	&.btn_secondary {
+		background: #F4F1F5;
+		color: $clr-primary;
+		border-color: #F4F1F5;
 		&:hover {
-			background: rgba($color: #000000, $alpha: 1);
+			background: $clr-primary;
 			color: $white;
 		}
 	}
