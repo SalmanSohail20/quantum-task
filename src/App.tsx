@@ -1,9 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import ProgressBar from "./component/Progressbar/ProgressBar";
-import ProductListing from "./component/ProductListing/ProductListing";
-import ContactUs from "./component/ContactUs/ContactUs";
-import AboutUs from "./component/AboutUs/AboutUs";
+// import ProductListing from "./component/ProductListing/ProductListing";
+import Analytics from "./pages/Analytics/Analytics";
+import ContactUs from "./pages/ContactUs/ContactUs";
+import AboutUs from "./pages/AboutUs/AboutUs";
 import Layout from "./layout/Layout";
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
         <Route path="/" element={<ProgressBar />} />
 
         <Route path="/*" element={<Layout />}>
-          <Route path="analytics" element={<ProductListing />} />
+          <Route path="analytics" element={<Analytics />} />
 
           <Route path="compare" element={<ContactUs />} />
           <Route path="competitors" element={<AboutUs />} />

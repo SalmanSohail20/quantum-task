@@ -18,9 +18,7 @@
         }
     }
     .head_navbar {
-        flex-grow: 1;
-        display: flex;
-        justify-content: center;
+   
     }
 
     .user_account {
@@ -94,8 +92,8 @@
 }
 
 .head_navbar {
-    display: flex;
-    justify-content: space-between;
+    display: none;
+    justify-content: center;
     align-items: center;
     position: absolute;
     top: 100%;
@@ -104,9 +102,13 @@
     right: 0;
     padding: 17px 0;
     margin-top: 2px;
+
     @media (min-width: $lg) {
         padding: 0;
         position: relative;
+             flex-grow: 1;
+        display: flex;
+        justify-content: center;
     }
     .navbar_brand a {
         color: white;
@@ -139,6 +141,7 @@
                 a {
                     position: relative;
                     color: $clr-primary;
+                    font-weight: 500;
                     &::before {
                         content: "";
                         position: absolute;

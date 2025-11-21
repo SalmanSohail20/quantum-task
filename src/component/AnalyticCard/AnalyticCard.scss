@@ -1,0 +1,48 @@
+@use "../../scss/base/variables" as *;
+@use "../../scss/base/mixins" as *;
+.analytic_crd_wrap{
+  display: flex;
+  flex-wrap: wrap;
+  gap:15px;
+  margin-bottom: 24px;
+  @media(min-width:$lg){
+      gap:24px;
+    }
+  .analytic_crd{
+    width: calc(100% - 11.25px);
+    border-radius: 16px;
+    padding: 18px;
+    border: 1px solid #E5E7EB;
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+    gap:24px;
+    @media(min-width:$sm){
+      width: calc(100%/2 - 11.25px);
+
+    }
+    @media(min-width:$md){
+      padding: 24px;
+      width: calc(100%/4 - 11.25px);
+      gap:15px;
+    }
+    @media(min-width:$lg){
+      width: calc(100%/4 - 18px);
+     
+    }
+    &.active{
+      .crd_num{
+        color: $clr-primary;
+      }
+    }
+  }
+  .crd_title{
+    color: $black;
+    @include font(14, 18, 600);
+  }
+  .crd_num{
+    @include font(24, 30, 600);
+    color: #111827;
+    
+  }
+}

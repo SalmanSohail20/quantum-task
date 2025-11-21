@@ -1,0 +1,36 @@
+@use "../../scss/base/variables" as *;
+@use "../../scss/base/mixins" as *;
+.comp_crd{
+    background: $white;
+    border: 1px solid #E5E7EB;
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    @media(min-width:$md){
+    
+}
+.crd_head{
+    display: flex;
+    gap: 8px;
+    .head_txt{
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+}
+.head_img{
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #E5E7EB;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+}
