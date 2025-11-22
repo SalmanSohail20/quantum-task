@@ -5,6 +5,8 @@ import ProgressBar from "./component/Progressbar/ProgressBar";
 import Analytics from "./pages/Analytics/Analytics";
 import Compare from "./pages/Compare/Compare";
 import Competitors from "./pages/Competitors/Competitors";
+
+import Settings from "./pages/Settings/Setting";
 import Layout from "./layout/Layout";
 
 function App() {
@@ -18,7 +20,7 @@ function App() {
 
           <Route path="compare" element={<Compare />} />
           <Route path="competitors" element={<Competitors />} />
-          <Route path="settings" element={<Competitors />} />
+          <Route path="settings" element={<Settings />} />
         </Route>
       </Routes>
     </Router>

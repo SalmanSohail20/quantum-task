@@ -15,14 +15,19 @@
         text-align: center;
         color: #6B7280;
         margin-bottom: 24px;
+             @include font(16,20,400);
     }
 
     .compe_crud_box{
-        padding: 24px;
+        padding:  20px;
         border-radius: 12px;
         border: 1px solid #E5E7EB;
         background-color: $white;
         margin-bottom: 24px;
+        @media(min-width: $md){
+            padding: 24px;
+            
+        }
      
     }
 
@@ -48,8 +53,15 @@
                 overflow: hidden;
                 @include font(14,18,400);
                 color: #6B7280;
-                max-width: 296px;
+                max-width: 200px;
                 width: 100%;
+                @media(min-width: 480px){
+                    max-width: 250px;
+                }
+            
+                @media(min-width: $sm){
+                    max-width: 296px;
+                }
             }
         }
         .rgt{
@@ -57,8 +69,10 @@
             gap: 16px;
             .ico{
                 cursor: pointer;
+                @include font(16,20);
                 color: #000;
                 &.ico-trash{
+                   @include font(20,22);
                     color: #E03131;
                 }
             }
@@ -66,5 +80,8 @@
     }
     .btn_secondary{
         width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 15px;
     }
 }

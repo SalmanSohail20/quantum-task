@@ -81,7 +81,7 @@ input[type="submit"] {
 	-webkit-border-radius: 0;
 	cursor: pointer;
 }
-.form-group {
+.form_group {
 	&:not(:last-child) {
 		margin-bottom: 16px;
 		@media (min-width: $md) {
@@ -102,12 +102,11 @@ input[type="submit"] {
 
 .label,
 label {
-	@include font(16, 22);
-	margin-bottom: 5px;
+	@include font(14, 18, 600);
+	margin-bottom: 16px;
 	display: block;
-	padding-left: 5px;
+	color: $clr-title;
 	@media (min-width: $md) {
-		@include font(18, 24);
 	}
 }
 

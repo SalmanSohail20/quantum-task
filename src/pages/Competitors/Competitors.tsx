@@ -11,8 +11,8 @@ const Competitors = () => {
         <div className="compe_crud_box">
           <div className="product_row">
             <div className="lft">
-              <strong>Daraz</strong>
-              <span>https://daraz.pk/products/i7ujvm%kj$bjchc...</span>
+              <strong className="title">Daraz</strong>
+              <span className="pro_link">https://daraz.pk/products/i7ujvm%kj$bjchc...</span>
               <span>1 product tracked</span>
             </div>
             <div className="rgt">
@@ -31,7 +31,7 @@ const Competitors = () => {
               <i className="ico ico-trash"></i>
             </div>
           </div>
-          <button className="btn btn_secondary"><i className="ico ico-plus"></i> competitor</button>
+          <button className="btn btn_secondary"><i className="ico ico-plus"></i>Add competitor</button>
         </div>
       </div>
     </div>

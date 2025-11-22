@@ -1,0 +1,86 @@
+@use "../../scss/base/variables" as *;
+@use "../../scss/base/mixins" as *;
+
+.settings_page {
+  .container {
+    max-width: 664px;
+    width: 100%;
+    margin: auto;
+  }
+  h1,
+  .h1 {
+    @include font(24, 28, 600);
+    color: $clr-title;
+    margin-bottom: 8px;
+  }
+  .setting_head {
+    text-align: center;
+    color: #6b7280;
+    margin-bottom: 24px;
+    @include font(16, 20, 400);
+  }
+
+  .setting_box {
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    background-color: $white;
+    margin-bottom: 24px;
+    @media (min-width: $md) {
+      padding: 24px;
+    }
+    .bx_title {
+      @include font(18, 22, 500);
+      color: $clr-title;
+      display: block;
+      margin-bottom: 24px;
+    }
+    .inner_content {
+      padding: 0 0px;
+      @media (min-width: $md) {
+        padding: 0 16px;
+      }
+      .sub_heading {
+        @include font(14, 18, 600);
+        color: $clr-title;
+        display: block;
+        margin-bottom: 14px;
+      }
+      .form_control {
+          background: #F9F9F9;
+      }
+    }
+    .connection_row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: space-between;
+      align-items: center;
+
+      @include font(14, 18, 400);
+      background: #f4f1f5;
+      border: 1px solid #e5e7eb;
+      padding: 27px 16px;
+      border-radius: 8px;
+      .lft_col {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        .title {
+          color: $clr-primary;
+        }
+        a {
+          color: $clr-title;
+          text-decoration: none;
+          &:hover {
+            color: $clr-primary;
+          }
+        }
+      }
+      .btn {
+        padding: 12px 14px;
+        line-height: 16px;
+      }
+    }
+  }
+}
