@@ -27,10 +27,19 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ico-edit-pen:before {
+  content: "\e904";
+}
+.ico-checkmark:before {
+  content: "\e90d";
+}
+.ico-burger-list-menu-navigation-svgrepo-com:before {
+  content: "\e90e";
+}
 .ico-user:before {
   content: "\e900";
 }
-.ico-logo-out:before {
+.ico-log-out:before {
   content: "\e901";
 }
 .ico-search:before {

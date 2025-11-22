@@ -24,11 +24,13 @@ const ComparisonCard = () => {
         <div className="responsive_table">
           <table className="table">
             <thead>
+              <tr>
               <th>Store</th>
               <th>Price</th>
               <th>Price difference</th>
               <th>Matching confidence (%)</th>
               <th>Product URL</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
@@ -81,11 +83,13 @@ const ComparisonCard = () => {
         <div className="responsive_table">
           <table className="table">
             <thead>
-              <th>Store</th>
-              <th>Price</th>
-              <th>Price difference</th>
-              <th>Matching confidence (%)</th>
-              <th>Product URL</th>
+              <tr>
+                <th>Store</th>
+                <th>Price</th>
+                <th>Price difference</th>
+                <th>Matching confidence (%)</th>
+                <th>Product URL</th>
+              </tr>
             </thead>
             <tbody>
               <tr>

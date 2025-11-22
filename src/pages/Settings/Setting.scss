@@ -83,4 +83,34 @@
       }
     }
   }
+
+
+  .premium_plan{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+    padding: 16px;
+    @include font(14, 16, 400);
+    background: #f4f1f5;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    .pre_lft{
+        color: $clr-title;
+        .pre_title{
+            color: $clr-primary;
+            display: block;
+            margin-bottom: 4px;
+        }
+        
+    }
+    .pre_rgt{
+        .btn_outline{
+            padding: 7px 20px;
+            line-height: 16px;
+            border-radius: 8px;
+        }
+    }
+  }
 }

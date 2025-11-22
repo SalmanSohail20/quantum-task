@@ -40,7 +40,7 @@ const Navbar = () => {
             </div>
           </div>
           <Link to="/" className="logout_btn">
-            <i className="ico ico-logo-out"></i>
+            <i className="ico ico-log-out"></i>
             <span>Disconnect</span>
           </Link>
         </div>
