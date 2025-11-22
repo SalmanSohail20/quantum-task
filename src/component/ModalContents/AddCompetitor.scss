@@ -1,0 +1,108 @@
+@use "../../scss/base/variables" as *;
+@use "../../scss/base/mixins" as *;
+.add_competitor{
+  .modal_head{
+    color: #6B7280;
+    margin-bottom: 32px;
+    text-align: center;
+    @include font(18, 22, 400);
+    h2,.h2{
+      text-align: center;
+      @include font(24, 28, 600);
+      color: $clr-title;
+      margin-bottom: 16px;
+    }
+
+  }
+  .add_fields{
+    padding: 24px 17px;
+    background: #F4F1F5;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    .input_field{
+      margin-bottom: 16px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+  .filled_fields{
+      padding: 20px ;
+    background: #F4F1F5;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    ul{
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      @include font(14, 18, 400);
+      li{
+        color: #6B7280;
+        overflow: hidden;
+        height: 24px;
+        a{
+          color: #6B7280;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          display: block;
+          width: 100%;
+        }
+        .ico{
+          position: relative;
+          &:before{
+              color: #fff;
+              z-index: 1;
+              position: relative;
+              left: 4px;
+            }
+            &:after{
+              content: "";
+              width: 24px;
+              height: 24px;
+              border-radius: 4px;
+              background: #000;
+              position: absolute;
+              left: 0;
+              top: 50%;
+              transform: translateY(-50%);
+              z-index: 0;      ;
+            }
+        }
+        &:first-child{
+          width: 24px;
+          flex-shrink: 0;
+          overflow: visible;
+        }
+        &:nth-child(2){
+          color: $clr-title;
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+
+  .btn_wrap{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    .btn{
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      width: 100%;
+      &.btn_secondry{
+        color: $clr-primary;
+      }
+      &.btn_cancle{
+        background: transparent;
+        padding: 0;
+        color: #6B7280;
+        font-weight: 400;
+      }
+    }
+  }
+}

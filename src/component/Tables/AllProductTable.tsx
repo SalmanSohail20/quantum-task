@@ -2,6 +2,8 @@ import "./AllProductTable.scss";
 import { useState } from "react";
 import Checkbox from "../common/Checkbox";
 import Switch from "../common/Switch";
+import Modal from "../common/Modal";
+import AddCompetitor from "../ModalContents/AddCompetitor";
 
 type ProductType = {
   id: number;
@@ -12,6 +14,7 @@ type ProductType = {
 
 const AllProductTable: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const itemsPerPage = 10;
 
   const products: ProductType[] = [
@@ -186,7 +189,7 @@ const AllProductTable: React.FC = () => {
               <td>${product.price.toFixed(2)}</td>
 
               <td>
-                <button type="button" className="competitor_btn">
+                <button type="button" className="competitor_btn" onClick={() => setIsModalOpen(true)}>
                   <i className="ico ico-plus"></i>
                   Add Competitor
                 </button>
@@ -227,6 +230,9 @@ const AllProductTable: React.FC = () => {
           </button>
         </div>
       </div>
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+       <AddCompetitor  />
+      </Modal>
     </>
   );
 };
