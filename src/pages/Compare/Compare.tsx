@@ -5,6 +5,7 @@ import "./Compare.scss";
 import FilterSearch from "../../component/common/FilterSearch";
 import AllProductTable from "../../component/Tables/AllProductTable";
 import ComparisonCard from "../../component/ComparisonCard/ComparisonCard";
+import { CompetitorsProvider } from "../../context/CompetitorsContext";
 
 const Compare: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -28,45 +29,47 @@ const Compare: React.FC = () => {
   };
 
   return (
-    <div className="container">
-      <ul className="tab_list">
-        {tabs.map((tab) => (
-          <li
-            key={tab.id}
-            className={activeTab === tab.id ? "active" : ""}
-            onClick={() => handleTabClick(tab.id)}
-          >
-            {tab.label}
-          </li>
-        ))}
-      </ul>
+    <CompetitorsProvider>
+      <div className="container">
+        <ul className="tab_list">
+          {tabs.map((tab) => (
+            <li
+              key={tab.id}
+              className={activeTab === tab.id ? "active" : ""}
+              onClick={() => handleTabClick(tab.id)}
+            >
+              {tab.label}
+            </li>
+          ))}
+        </ul>
 
-      {activeTab === "all-products" && (
-        <div className="tab-content">
-          <div className="all_products_card">
-            <div className="pro_crd_head">
-              <FilterSearch />
+        {activeTab === "all-products" && (
+          <div className="tab-content">
+            <div className="all_products_card">
+              <div className="pro_crd_head">
+                <FilterSearch />
 
-              <div className="row_selection">
-                <div className="selection_txt">
-                  <strong className="txt_primary">Plan: Premium</strong>(Upto 50 products)
-                  <strong className="txt_dark">You have selected 1</strong>
+                <div className="row_selection">
+                  <div className="selection_txt">
+                    <strong className="txt_primary">Plan: Premium</strong>(Upto 50 products)
+                    <strong className="txt_dark">You have selected 1</strong>
+                  </div>
+                  <button className="btn btn_outline">Change plan</button>
                 </div>
-                <button className="btn btn_outline">Change plan</button>
               </div>
+
+              <AllProductTable />
             </div>
-
-            <AllProductTable />
           </div>
-        </div>
-      )}
+        )}
 
-      {activeTab === "comparison-analytics" && (
-        <div className="tab-content">
-         <ComparisonCard />
-        </div>
-      )}
-    </div>
+        {activeTab === "comparison-analytics" && (
+          <div className="tab-content">
+           <ComparisonCard />
+          </div>
+        )}
+      </div>
+    </CompetitorsProvider>
   );
 };
 

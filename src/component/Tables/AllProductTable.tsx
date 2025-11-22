@@ -1,9 +1,11 @@
 import "./AllProductTable.scss";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Checkbox from "../common/Checkbox";
 import Switch from "../common/Switch";
 import Modal from "../common/Modal";
 import AddCompetitor from "../ModalContents/AddCompetitor";
+import { useCompetitors } from "../../context/CompetitorsContext";
 
 type ProductType = {
   id: number;
@@ -15,7 +17,9 @@ type ProductType = {
 const AllProductTable: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedProductId, setSelectedProductId] = useState<number | null>(null);
   const itemsPerPage = 10;
+  const { getCompetitors } = useCompetitors();
 
   const products: ProductType[] = [
     {
@@ -189,10 +193,30 @@ const AllProductTable: React.FC = () => {
               <td>${product.price.toFixed(2)}</td>
 
               <td>
-                <button type="button" className="competitor_btn" onClick={() => setIsModalOpen(true)}>
-                  <i className="ico ico-plus"></i>
-                  Add Competitor
-                </button>
+                {(() => {
+                  const productCompetitors = getCompetitors(product.id);
+                  return productCompetitors.length > 0 ? (
+                    <div className="added_competitors">
+                      {productCompetitors.map((comp, index) => (
+                        <Link key={index} to={comp.url} target="_blank" rel="noopener noreferrer">
+                          {comp.name}
+                        </Link>
+                      ))}
+                      <i className="ico ico-edit" onClick={() => {
+                        setSelectedProductId(product.id);
+                        setIsModalOpen(true);
+                      }}></i>
+                    </div>
+                  ) : (
+                    <button type="button" className="competitor_btn" onClick={() => {
+                      setSelectedProductId(product.id);
+                      setIsModalOpen(true);
+                    }}>
+                      <i className="ico ico-plus"></i>
+                      Add Competitor
+                    </button>
+                  );
+                })()}
               </td>
 
               <td>
@@ -231,7 +255,7 @@ const AllProductTable: React.FC = () => {
         </div>
       </div>
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-       <AddCompetitor  />
+       {selectedProductId && <AddCompetitor productId={selectedProductId} onClose={() => setIsModalOpen(false)} />}
       </Modal>
     </>
   );

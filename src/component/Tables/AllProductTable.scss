@@ -112,6 +112,17 @@
     }
   }
 }
+.added_competitors{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  a{
+    color: $clr-title;
+    text-transform: capitalize;
+    text-decoration: underline;
+    font-weight: 700;
+  }
+}
 .pagination_wrap {
   display: flex;
   justify-content: center;
