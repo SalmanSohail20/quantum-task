@@ -27,8 +27,7 @@
     @include font(30, 34, 600);
     margin-left: 10px;
     @media (min-width: $md) {
-        margin-left: 20px;
-
+      margin-left: 20px;
     }
     @media (min-width: $lg) {
       display: none;
@@ -39,7 +38,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-   
+
     // &:hover {
     //     .user_info {
     //         opacity: 1;
@@ -58,11 +57,11 @@
       // visibility: visible;
       // opacity: 1;
       @media (max-width: 460px) {
-          display: none;
-        }
-        @media (min-width: $sm) {
-            gap: 2px;
-            @include font(14, 16, 400);
+        display: none;
+      }
+      @media (min-width: $sm) {
+        gap: 2px;
+        @include font(14, 16, 400);
       }
     }
     .user_name {
@@ -100,12 +99,11 @@
     .ico {
       @include font(18, 16);
       @media (max-width: $lg-m) {
-           @include font(20, 16);
-
-       }
+        @include font(20, 16);
+      }
     }
-    span{
-          @media (max-width: $sm-m) {
+    span {
+      @media (max-width: $sm-m) {
         display: none;
       }
     }
@@ -119,78 +117,104 @@
       justify-content: flex-end;
     }
   }
-}
-
-.head_navbar {
-  display: none;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 100%;
-  background: $white;
-  left: 0;
-  right: 0;
-  padding: 17px 0;
-  margin-top: 1px;
+  .head_navbar {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    background: $white;
+    left: 0;
+    right: 0;
+    padding: 17px 0;
+    margin-top: 1px;
   
-  &.show {
+    &.show {
       display: flex;
       z-index: 9999;
     }
-    
+  
     @media (min-width: $lg) {
       margin-top: 0px;
-    padding: 0;
-    position: relative;
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-  }
-  .navbar_brand a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.5em;
-    font-weight: bold;
-  }
-  .navbar_links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    margin: 0;
-    padding: 0;
-    @include font(16, 20, 400);
-    flex-direction: column;
-    @media (min-width: $lg) {
-      flex-direction: row;
-      gap: 20px;
-    }
-    @media (min-width: $xl) {
-      gap: 40px;
-    }
-    li {
-      a {
-        text-decoration: none;
-        padding: 5px 0;
-        color: #6b7280;
+      padding: 0;
+      position: relative;
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 100%;
+      background: $white;
+      left: 0;
+      right: 0;
+      padding: 17px 0;
+      margin-top: 1px;
+  
+      @media (min-width: $lg) {
+        margin-top: 0px;
+        padding: 0;
+        position: relative;
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
       }
-      &.active {
+    }
+  
+    .navbar_links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+      @include font(16, 20, 400);
+      flex-direction: column;
+      @media (min-width: $lg) {
+        flex-direction: row;
+        gap: 20px;
+      }
+      @media (min-width: $xl) {
+        gap: 40px;
+      }
+      li {
         a {
-          position: relative;
-          color: $clr-primary;
-          font-weight: 500;
-          &::before {
-            content: "";
-            position: absolute;
-            top: 100%;
-            width: 100%;
-            height: 2px;
-            background: $clr-primary;
-            z-index: 0;
-            border-radius: 2px;
-            transition: all 0.3s ease-in-out;
+          text-decoration: none;
+          padding: 5px 0;
+          color: #6b7280;
+        }
+        &.active {
+          a {
+            position: relative;
+            color: $clr-primary;
+            font-weight: 500;
+            &::before {
+              content: "";
+              position: absolute;
+              top: 100%;
+              width: 100%;
+              height: 2px;
+              background: $clr-primary;
+              z-index: 0;
+              border-radius: 2px;
+              transition: all 0.3s ease-in-out;
+            }
           }
         }
       }
     }
   }
+  .navbar_brand {
+    max-width: 200px;
+    width: 100%;
+    @media(min-width: $xxl) {
+      max-width: 268px;
+      
+    }
+    a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+  }
 }
+
