@@ -5,21 +5,21 @@
     display: flex;
     align-items: center;
     gap: 64px;
-    margin:0 0  19px 0;
+    margin:0 0 17px 0;
     @include font(18, 22px , 500);
     list-style: none;
     padding: 0;
     color: #6B7280;
     li{
         cursor: pointer;
-        padding: 10px 0;
+        padding: 0px 0 10px;
         &.active{
             color: $clr-primary;
             position: relative;
             &:after{
                 content:"";
                 position: absolute;
-                top: 100%;
+                top: 88%;
                 left:0;
                 right: 0;
                 height: 2px;
@@ -41,9 +41,15 @@
 
     .pro_crd_head {
         display: flex;
-        justify-content: space-between;
-        gap: 45px;
+        flex-wrap: wrap;
         margin-bottom: 26px;
+        gap: 20px;
+        @media(min-width:$xl){
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            gap: 45px;
+            
+        }
         .form_control {
             background: #F9F9F9;
         }
@@ -58,14 +64,21 @@
             color: #111827;
             .selection_txt {
                 display: flex;
-                gap: 8px;
+                flex-wrap: wrap;
+                gap: 2px;
                 align-items: center;
+                white-space: nowrap;
+                @meida(min-width:$md){
+                    gap: 8px;
+
+                }
                 strong {
                     font-weight: 600;
                 }
             }
             .btn {
                 padding: 5px 19px;
+                white-space: nowrap;
             }
         }
     }

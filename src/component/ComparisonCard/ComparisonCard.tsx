@@ -35,7 +35,7 @@ const ComparisonCard = () => {
             <tbody>
               <tr>
                 <td>My Product</td>
-                <td>WHP-2024-01</td>
+                <td>$129.99</td>
                 <td>-</td>
                 <td>-</td>
                 <td>
@@ -94,7 +94,7 @@ const ComparisonCard = () => {
             <tbody>
               <tr>
                 <td>My Product</td>
-                <td>WHP-2024-01</td>
+                <td>$129.99</td>
                 <td>-</td>
                 <td>-</td>
                 <td>

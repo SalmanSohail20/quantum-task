@@ -10,6 +10,16 @@
   @media (min-width: $xxl) {
     padding: 17px 0;
   }
+  &.show{
+    .burger_btn{
+      .ico{
+        transition: all linear 0.3s;
+        &:before{
+          content: "\e903";
+        }
+      }
+    }
+  }
   .container {
     display: flex;
     align-items: center;

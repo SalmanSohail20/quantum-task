@@ -20,7 +20,7 @@
 .sub_heading {
     @include font(18, 24, 500);
     color: $clr-title;
-    margin-bottom: 16px;
+    margin-bottom: 13px;
     display: block;
 }
 .search_wrap {
@@ -75,7 +75,8 @@
         display: flex;
         align-items: center;
         gap: 8px;
-        margin-bottom: 40px;
+        // margin-bottom: 40px;
+        padding-left: 18px;
         .head_txt {
             display: flex;
             flex-direction: column;
@@ -120,24 +121,70 @@
                 }
             }
         }
+        th,td{
+            &:first-child {
+                min-width: 160px;
+                @media(min-width:$xxl){
+                    min-width: 333px;
+
+                }
+            }
+            &:nth-child(2){
+                min-width: 150px;
+                @media(min-width:$xxl){
+                    min-width: 217px;
+
+                }
+            }
+            &:nth-child(3){
+                min-width: 130px;
+                @media(min-width:$xxl){
+                    min-width: 200px;
+
+                }
+            }
+            &:nth-child(4){
+                min-width: 190px;
+                @media(min-width:$xxl){
+                    min-width: 342px;
+
+                }
+            }
+            &:last-child{
+                    min-width: 138px;
+                    @media(min-width:$xxl){
+                        min-width: 138px;
+
+                    }
+            }
+        }
         tbody {
             tr {
                 &:first-child {
                     td {
                         background: #f4f1f5;
                         color: $clr-title;
+                          
                     }
                 }
             }
             td {
-                padding: 18px 5px;
+                padding: 14px 5px;
                 color: #6b7280;
                 border-bottom: 1px solid #e5e7eb;
                 font-weight: 500;
+                @media(min-width:$xxl){
+                     @include font(18, 25, 400);
+
+                 }
                 &:first-child {
+                      @include font(14, 16,);
                     padding-left: 19px;
                     font-weight: 600;
                     color: $clr-title;
+                }
+                &:last-child{
+                       @include font(14, 16,);
                 }
                 a {
                     color: #6b7280;

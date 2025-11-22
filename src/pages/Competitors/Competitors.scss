@@ -33,6 +33,7 @@
 
     .product_row{
         display: flex;
+        align-items: flex-start;
         justify-content: space-between;
         gap: 16px;
         margin-bottom: 19px;
@@ -43,6 +44,7 @@
             display: flex;
             flex-direction: column;
             gap: 8px;
+            overflow: hidden;
             .title{
                 @include font(14,18,600);
                 color: $clr-title;
@@ -53,15 +55,8 @@
                 overflow: hidden;
                 @include font(14,18,400);
                 color: #6B7280;
-                max-width: 200px;
                 width: 100%;
-                @media(min-width: 480px){
-                    max-width: 250px;
-                }
             
-                @media(min-width: $sm){
-                    max-width: 296px;
-                }
             }
         }
         .rgt{

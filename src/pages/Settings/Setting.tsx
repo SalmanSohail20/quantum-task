@@ -34,7 +34,7 @@ const page = () => {
               <input type="email" className="form_control" name="" id="" placeholder="john@example.com" />
             </div>
             <div className="form_group">
-              <label htmlFor="">Email address</label>
+              <label htmlFor="">Current plan</label>
              <div className="premium_plan">
               <div className="pre_lft">
                 <strong className="pre_title">Premium Plan</strong>
