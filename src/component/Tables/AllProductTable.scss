@@ -105,6 +105,8 @@
     .competitor_btn {
       display: flex;
       align-items: center;
+      background: transparent;
+      border: 0;
       color: $clr-primary;
       @include font(14, 18, 600);
       gap: 9px;

@@ -5,11 +5,7 @@ import { Link } from "react-router-dom";
 const ComparisonCard = () => {
   return (
     <>
-      <strong className="sub_heading">Recent comparisons</strong>
-      <div className="comp_crd_head">
-        <FilterSearch />
-        <button className="btn btn_outline">View All</button>
-      </div>
+      
 
       <div className="comp_crd">
         <div className="crd_head">
