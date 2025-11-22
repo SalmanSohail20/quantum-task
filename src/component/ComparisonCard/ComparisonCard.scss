@@ -7,7 +7,14 @@
     gap: 5px;
     margin-bottom: 8px;
     .btn_outline {
-        padding: 13px 35px;
+        padding: 13px 16px;
+        white-space: nowrap;
+ 
+        @media(min-width:$md){
+            padding: 13px 35px;
+         
+
+        }
     }
 }
 .sub_heading {
@@ -19,9 +26,14 @@
 .search_wrap {
     display: flex;
     align-items: center;
-    gap: 16px;
-    max-width: 426px;
-  width: 100%;
+    gap: 5px;
+    max-width: 350px;
+    width: 100%;
+    @media(min-width:$md){
+        max-width: 426px;
+        gap: 16px;
+      
+  }
 
     .form_control {
         height: 48px;
