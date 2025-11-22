@@ -17,7 +17,7 @@ const ProgressBar = ({}: ProgressBarProps) => {
         }
         return prev + 1;
       });
-    }, 50); // speed (50ms)
+    }, 50); 
 
     return () => clearInterval(interval);
   }, []);

@@ -4,6 +4,7 @@ interface ImportCardProps {
 }
 const ImportCard = ({ onSwitchToListing }: ImportCardProps) => {
   return (
+    <div className="import_crd_wrap">
     <div className="import_pro_crd">
       <div className="crd_icon">
         <i className="ico ico-check"></i>
@@ -19,6 +20,8 @@ const ImportCard = ({ onSwitchToListing }: ImportCardProps) => {
       <button className="btn btn_primary" onClick={onSwitchToListing}>
         Go to products listing
       </button>
+    </div>
+
     </div>
   );
 };

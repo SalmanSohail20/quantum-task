@@ -20,13 +20,23 @@
     .head_navbar {
    
     }
+    .burger_btn{
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        @include font(30, 34, 600);
+        margin-left: 20px;
+        @media (min-width: $lg) {
+            display: none;
+        }
+    }
 
     .user_account {
         display: flex;
         align-items: center;
         gap: 10px;
         @media (min-width: $md-m) {
-            flex-direction: column-reverse;
+            // flex-direction: column-reverse;
         }
         // &:hover {
         //     .user_info {
@@ -42,11 +52,14 @@
             @include font(14, 16, 400);
             color: #6b7280;
             text-align: end;
+            // position: relative;
+            // visibility: visible;
+            // opacity: 1;
             @media (min-width: $md-m) {
-                position: absolute;
-                top: 100%;
-                opacity: 0;
-                visibility: hidden;
+                // position: absolute;
+                // top: 100%;
+                // opacity: 0;
+                // visibility: hidden;
             }
         }
         .user_name {
@@ -88,11 +101,15 @@
         display: flex;
         align-items: center;
         gap: 20px;
+        @media (max-width: $lg-m) {
+            flex-grow: 1;
+            justify-content: flex-end;
+        }
     }
 }
 
 .head_navbar {
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;

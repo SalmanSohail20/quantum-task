@@ -11,6 +11,7 @@ const Navbar = () => {
             <img src="/images/logo.svg" alt="" />
           </Link>
         </div>
+        <button className="burger_btn"><i className="ico ico-burger-list-menu-navigation-svgrepo-com"></i></button>
         <nav className="head_navbar">
           <ul className="navbar_links">
             <li className={location.pathname === "/analytics" ? "active" : ""}>
