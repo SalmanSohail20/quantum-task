@@ -1,4 +1,5 @@
 import "./AllProductTable.scss";
+import { useState } from "react";
 import Checkbox from "../common/Checkbox";
 import Switch from "../common/Switch";
 
@@ -10,7 +11,9 @@ type ProductType = {
 };
 
 const AllProductTable: React.FC = () => {
-  // Product Array Inside The Same Component
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10;
+
   const products: ProductType[] = [
     {
       id: 1,
@@ -60,9 +63,89 @@ const AllProductTable: React.FC = () => {
       price: 99.99,
       image: "/images/pro-4.png",
     },
+
+    {
+      id: 9,
+      name: "Wireless Headphones Pro",
+      price: 129.99,
+      image: "/images/product-1.png",
+    },
+    {
+      id: 10,
+      name: "Smart Watch Elite",
+      price: 229.99,
+      image: "/images/pro-2.png",
+    },
+    {
+      id: 11,
+      name: "Designer Sunglasses",
+      price: 29.99,
+      image: "/images/pro-3.png",
+    },
+    {
+      id: 12,
+      name: "Running Shoes Max",
+      price: 99.99,
+      image: "/images/pro-4.png",
+    },
+    {
+      id: 13,
+      name: "Wireless Headphones Pro",
+      price: 129.99,
+      image: "/images/product-1.png",
+    },
+    {
+      id: 14,
+      name: "Smart Watch Elite",
+      price: 229.99,
+      image: "/images/pro-2.png",
+    },
+    {
+      id: 15,
+      name: "Designer Sunglasses",
+      price: 29.99,
+      image: "/images/pro-3.png",
+    },
+    {
+      id: 16,
+      name: "Running Shoes Max",
+      price: 99.99,
+      image: "/images/pro-4.png",
+    },
+
+    {
+      id: 17,
+      name: "Wireless Headphones Pro",
+      price: 129.99,
+      image: "/images/product-1.png",
+    },
+    {
+      id: 18,
+      name: "Smart Watch Elite",
+      price: 229.99,
+      image: "/images/pro-2.png",
+    },
+    {
+      id: 19,
+      name: "Designer Sunglasses",
+      price: 29.99,
+      image: "/images/pro-3.png",
+    },
+    {
+      id: 20,
+      name: "Running Shoes Max",
+      price: 99.99,
+      image: "/images/pro-4.png",
+    },
   ];
 
+  const totalPages = Math.ceil(products.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const currentProducts = products.slice(startIndex, startIndex + itemsPerPage);
+
   return (
+    <>
+    
     <div className="all_product_table">
       <table className="table">
         <thead>
@@ -80,7 +163,7 @@ const AllProductTable: React.FC = () => {
         </thead>
 
         <tbody>
-          {products.map((product) => (
+          {currentProducts.map((product) => (
             <tr key={product.id}>
               <td>
                 <Checkbox id={`cb-${product.id}`} />
@@ -117,6 +200,34 @@ const AllProductTable: React.FC = () => {
         </tbody>
       </table>
     </div>
+      <div className="pagination_wrap">
+        <div className="pagination">
+          <button className="btn_prev"
+            onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+            disabled={currentPage === 1}
+          >
+           <span className="ico-left-arrow"></span>Prev
+          </button>
+          {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+            <button
+              key={page}
+              onClick={() => setCurrentPage(page)}
+              className={page === currentPage ? "active" : ""}
+            >
+              {page}
+            </button>
+          ))}
+          <button className="btn_next"
+            onClick={() =>
+              setCurrentPage((prev) => Math.min(prev + 1, totalPages))
+            }
+            disabled={currentPage === totalPages}
+          >
+       Next<span className="ico-right-arrow"></span>
+          </button>
+        </div>
+      </div>
+    </>
   );
 };
 
